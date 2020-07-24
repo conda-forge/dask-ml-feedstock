@@ -5,7 +5,7 @@ Home: http://github.com/dask/dask-ml
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Distributed and parallel machine learning using dask.
 
