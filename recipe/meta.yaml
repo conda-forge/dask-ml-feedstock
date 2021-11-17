@@ -23,14 +23,14 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
-    - dask >=1.0.0
+    - dask >=2.4.0
     - dask-glm >=0.2.0
-    - distributed >=1.25.0
+    - distributed >=2.4.0
     - multipledispatch >=0.4.9
-    - numba
-    - numpy
+    - numba>=0.51.0
+    - numpy>=1.20.0
     - packaging
-    - pandas >=0.23.0
+    - pandas >=0.24.2
     - python >=3
     - scikit-learn >=1.0.0
     - scipy
