@@ -1,6 +1,6 @@
 {% set name = "dask-ml" %}
-{% set version = "2021.10.17" %}
-{% set sha256 = "88eb2e9924b3df4a17deacabf45787d0fe26059fdc223ff45fd3ee6a8fe0273a" %}
+{% set version = "2021.11.16" %}
+{% set sha256 = "78710a374fe8968d292ac53f499ca568460d2544a8d37338adec2aa94cb4b25e" %}
 
 package:
   name: {{ name|lower }}
@@ -23,14 +23,14 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
-    - dask >=1.0.0
+    - dask >=2.4.0
     - dask-glm >=0.2.0
-    - distributed >=1.25.0
+    - distributed >=2.4.0
     - multipledispatch >=0.4.9
-    - numba
-    - numpy
+    - numba >=0.51.0
+    - numpy >=1.20.0
     - packaging
-    - pandas >=0.23.0
+    - pandas >=0.24.2
     - python >=3
     - scikit-learn >=1.0.0
     - scipy
