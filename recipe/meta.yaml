@@ -1,6 +1,6 @@
 {% set name = "dask-ml" %}
-{% set version = "1.9.0" %}
-{% set sha256 = "2f376a7114133b484a6d393f62298473116fc49c79ec7d50d5b031d752f54307" %}
+{% set version = "2022.5.27" %}
+{% set sha256 = "6369d3934192bcc1923fcee84c3fb8fbcceca102137901070ba3f1d9e386cce4" %}
 
 package:
   name: {{ name|lower }}
