@@ -1,6 +1,5 @@
 {% set name = "dask-ml" %}
-{% set version = "2022.5.27" %}
-{% set sha256 = "6369d3934192bcc1923fcee84c3fb8fbcceca102137901070ba3f1d9e386cce4" %}
+{% set version = "2023.3.24" %}
 
 package:
   name: {{ name|lower }}
@@ -9,13 +8,13 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 96c090db6d32836536e3f09ca64deb599e864587aa8e3d4d2c6b4af588733307
 
 build:
   number: 0
   # numba isn't available on s390x
-  skip: True  # [py<36 or s390x]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: True  # [py<38 or s390x]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   host:
@@ -37,6 +36,7 @@ requirements:
     - python
     - scikit-learn >=1.0.0
     - scipy
+    - importlib-metadata # [py>=310]
 
 test:
   imports:
