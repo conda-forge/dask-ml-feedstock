@@ -1,19 +1,16 @@
-{% set name = "dask-ml" %}
 {% set version = "2023.3.24" %}
-{% set sha256 = "96c090db6d32836536e3f09ca64deb599e864587aa8e3d4d2c6b4af588733307" %}
 
 package:
-  name: {{ name|lower }}
+  name: dask-ml
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/d/dask-ml/dask-ml-{{ version }}.tar.gz
+  sha256: 96c090db6d32836536e3f09ca64deb599e864587aa8e3d4d2c6b4af588733307
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -32,10 +29,9 @@ requirements:
     - packaging
     - pandas >=0.24.2
     - python >=3.8
-    - scikit-learn >=1.0.0
+    - scikit-learn >=1.2.0
     - scipy
     - setuptools
-    - six
 
 test:
   imports:
@@ -49,9 +45,13 @@ test:
     - dask_ml.preprocessing
     - dask_ml.utils
     - dask_ml.wrappers
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
-  home: http://github.com/dask/dask-ml
+  home: https://github.com/dask/dask-ml
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt

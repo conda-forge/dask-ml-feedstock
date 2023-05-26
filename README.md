@@ -3,7 +3,7 @@ About dask-ml-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dask-ml-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/dask/dask-ml
+Home: https://github.com/dask/dask-ml
 
 Package license: BSD-3-Clause
 
