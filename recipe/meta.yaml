@@ -1,17 +1,16 @@
 {% set version = "2023.3.24" %}
-{% set sha256 = "" %}
 
 package:
   name: dask-ml
-  version: 96c090db6d32836536e3f09ca64deb599e864587aa8e3d4d2c6b4af588733307
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/d/dask-ml/dask-ml-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 96c090db6d32836536e3f09ca64deb599e864587aa8e3d4d2c6b4af588733307
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
