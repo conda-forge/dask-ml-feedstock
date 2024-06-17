@@ -1,12 +1,12 @@
-{% set version = "2024.3.20" %}
+{% set version = "2024.4.4" %}
 
 package:
   name: dask-ml
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/dask-ml/dask-ml-{{ version }}.tar.gz
-  sha256: d20e40b4239740e4b7465208624dbc01cdc42e3a13e4429c386a7e21a965a959
+  url: https://pypi.io/packages/source/d/dask-ml/dask_ml-{{ version }}.tar.gz
+  sha256: 7956910a49e1e31944280fdb311adf245da11ef410d67deb7a05c67c7d0c4498
 
 build:
   noarch: python
@@ -17,8 +17,8 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - setuptools
-    - setuptools_scm
+    - hatchling
+    - hatch-vcs
   run:
     - dask >=2.4.0
     - dask-glm >=0.2.0
@@ -31,7 +31,6 @@ requirements:
     - python >=3.8
     - scikit-learn >=1.2.0
     - scipy
-    - setuptools
 
 test:
   imports:
