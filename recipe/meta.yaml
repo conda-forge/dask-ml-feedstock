@@ -17,8 +17,8 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - setuptools
-    - setuptools_scm
+    - hatchling
+    - hatch-vcs
   run:
     - dask >=2.4.0
     - dask-glm >=0.2.0
@@ -31,7 +31,6 @@ requirements:
     - python >=3.8
     - scikit-learn >=1.2.0
     - scipy
-    - setuptools
 
 test:
   imports:
