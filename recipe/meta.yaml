@@ -5,17 +5,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/dask-ml/dask_ml-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/d/dask-ml/dask_ml-{{ version }}.tar.gz
   sha256: 7956910a49e1e31944280fdb311adf245da11ef410d67deb7a05c67c7d0c4498
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
@@ -28,7 +28,7 @@ requirements:
     - numpy >=1.20.0
     - packaging
     - pandas >=0.24.2
-    - python >=3.8
+    - python >={{ python_min }}
     - scikit-learn >=1.2.0
     - scipy
 
@@ -46,6 +46,7 @@ test:
     - dask_ml.wrappers
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
