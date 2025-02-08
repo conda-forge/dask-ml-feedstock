@@ -1,4 +1,9 @@
 {% set version = "2025.1.0" %}
+# CI failed in
+# https://github.com/conda-forge/dask-ml-feedstock/pull/41
+# when python_min was not set, when pytohn 3.9 was requested
+# but dask-core required python>=3.10
+{% set python_min = "3.10" %}
 
 package:
   name: dask-ml
