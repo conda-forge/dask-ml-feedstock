@@ -20,16 +20,16 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - dask >=2.4.0
+    - dask >=2025.1.0
     - dask-glm >=0.2.0
-    - distributed >=2.4.0
+    - distributed >=2025.1.0
     - multipledispatch >=0.4.9
     - numba >=0.51.0
-    - numpy >=1.20.0
+    - numpy >=1.24.0
     - packaging
     - pandas >=0.24.2
     - python >={{ python_min }}
-    - scikit-learn >=1.2.0
+    - scikit-learn >=1.6.1
     - scipy
 
 test:
